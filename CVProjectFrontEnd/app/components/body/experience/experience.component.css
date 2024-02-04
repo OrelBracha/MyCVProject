@@ -1,0 +1,77 @@
+/* experience.component.scss */
+
+.experience-section {
+    max-width: 800px; 
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .experience-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    color: #007bff; 
+  }
+  
+  .company {
+    font-weight: bold;
+  }
+  
+  .date {
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  .github-link-container {
+    position: relative;
+    padding-bottom: 30px; 
+  }
+
+
+  .github-description {
+    font-size: 16px;
+    color: #333; 
+    margin-bottom: 10px; 
+    
+  }
+.github-link {
+    z-index: 4; 
+    margin-top: 20px; 
+  
+    p {
+      margin-bottom: 10px; 
+    }
+  
+    a {
+      color: #0366d6; 
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease; 
+  
+      &:hover {
+        color: #034078; 
+      }
+    }
+  }
+  
+  
+  footer {
+    z-index: 1; 
+    margin-top: 30px;
+  }
+  

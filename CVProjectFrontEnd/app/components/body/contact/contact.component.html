@@ -1,0 +1,33 @@
+<!-- contact.component.html -->
+<div class="contact">
+    <h2>Contact Me</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <label for="email">Email:</label>
+        <input type="text" id="email" formControlName="email">
+        <div *ngIf="contactForm.get('email')!.hasError('required')">Email is required</div>
+        <div *ngIf="contactForm.get('email')!.hasError('email')">Invalid email</div>
+      
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" formControlName="firstName">
+        <div *ngIf="contactForm.get('firstName')!.hasError('required')">First Name is required</div>
+        <div *ngIf="contactForm.get('firstName')!.hasError('pattern')">Only alphabetical characters allowed</div>
+      
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" formControlName="lastName">
+        <div *ngIf="contactForm.get('lastName')!.hasError('required')">Last Name is required</div>
+        <div *ngIf="contactForm.get('lastName')!.hasError('pattern')">Only alphabetical characters allowed</div>
+      
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" formControlName="phoneNumber">
+        <div *ngIf="contactForm.get('phoneNumber')!.hasError('required')">Phone Number is required</div>
+        <div *ngIf="contactForm.get('phoneNumber')!.hasError('pattern')">Only numeric characters allowed</div>
+      
+        <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+
+    <div *ngIf="submitMessage" [class.error]="submitMessage.includes('Error')" class="submit-message">
+        {{ submitMessage }}
+    </div>
+
+  </div>
+  
